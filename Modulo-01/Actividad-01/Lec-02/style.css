@@ -1,0 +1,24 @@
+* {
+    text-align: center;
+}
+
+.header {
+    background-color: aqua;
+    color: #920202;
+    padding: 60px;
+}
+
+.content {
+    background-color: blanchedalmond;
+    color: blueviolet;
+    padding: 100px;
+}
+
+.footer {
+    background-color: blueviolet;
+    color: aliceblue;
+    bottom: 0;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+}

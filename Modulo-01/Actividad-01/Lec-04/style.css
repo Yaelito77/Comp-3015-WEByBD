@@ -1,0 +1,47 @@
+* {
+    text-align: center;
+    background-color: rgb(255, 251, 178);
+}
+
+.header {
+    background-color: rgb(209, 160, 255);
+    padding: 40px;
+}
+
+.titulo {
+    background-color: blueviolet;
+    padding: 30px;
+}
+
+.content {
+    display: inline-block;
+    padding: 300px;
+    font-size: xx-large;
+}
+
+.paracaidas {
+    background-color: rgb(255, 117, 117);
+}
+
+.tibu {
+    background-color: rgb(88, 219, 255);
+}
+
+.carro {
+    background-color: rgb(0, 255, 149);
+}
+
+.japon {
+    background-color: rgb(255, 125, 235);
+}
+
+.espacio {
+    background-color: rgb(255, 191, 0);
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background-color: red;
+}

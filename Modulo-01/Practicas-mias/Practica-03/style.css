@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    margin-right: 40px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: 63px;
+    width: 100%;
+    z-index: 100;
+}

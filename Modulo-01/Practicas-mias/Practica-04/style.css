@@ -1,0 +1,52 @@
+.title {
+    padding: 100px;
+    margin: 0;
+    text-align: center;
+    background: url(header.jpg) no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+.title-02 {
+    padding: 100px;
+    margin: 0;
+    background: url(costos.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    
+}
+
+.nav {
+    background-color: #757575;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav li {
+    display: inline-flex;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 150px;
+}
+
+div {
+    text-align: center;
+}
+
+.oracion-01 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+}

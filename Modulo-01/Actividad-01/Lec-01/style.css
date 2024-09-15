@@ -1,0 +1,30 @@
+* {
+    background-color: rgb(184, 255, 255);
+    text-align: center;
+}
+
+.titulo {
+    background-color: rgb(40, 213, 130);
+    padding: 30px;
+}
+
+.titulo-2 {
+    background-color: rgb(26, 216, 38);
+    padding: 20px;
+}
+
+.content {
+    background-color: brown;
+    margin: 30px;
+}
+
+.lista {
+    display: inline-block;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
