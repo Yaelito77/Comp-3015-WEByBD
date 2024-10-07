@@ -1,0 +1,130 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(96, 96, 96);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #b2d202;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.footer {
+    color: white;
+}
+
+.contenedor-testimonios {
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.contenedor-testimonios,
+.contenedor-imagenes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonio,
+.imagen {
+    background-color: rgb(130, 130, 130);
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonio {
+    border: 1px solid #b2d202;
+}
+
+.imagen {
+    width: 100%;
+}
+
+.formulario {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    flex: 1;
+    margin-right: 10px;
+    border: 1px soid #9b9b9b;
+}
+
+input[type="submit"] {
+    background-color: #b2d202;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.mostrarform {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .contenedor-testimonios,
+    .contenedor-imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        display: none;
+    }
+
+    .mostrarform {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mostrarform a {
+        background-color: #b2d202;
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .mostrar-form a:hover {
+        background-color: #b2d202;
+    }
+}
