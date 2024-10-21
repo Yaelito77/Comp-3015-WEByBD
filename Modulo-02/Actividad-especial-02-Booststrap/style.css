@@ -1,0 +1,124 @@
+body {
+    background-color: #31383F;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-center {
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    background-image: url(imagen-de-fondoBOO.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: #FEDD89;
+    text-align: center;
+    font-size: 3em;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1,1em;
+    color: #666;
+}
+
+.card-body {
+    background-color: #FEDD89;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-text {
+    font-size: 1.1em;
+    color: #333;
+    font-style: italic;
+}
+
+.card-subtitle {
+    margin-top: 10px;
+    color: #888;
+    font-weight: bold;
+}
+
+.card:hover .card-body {
+    background-color: #ededed;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary, .btn-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-image: linear-gradient(45deg, #0A62D0, #0A62D0);
+    border: none;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(45deg, #FEDD89, #0A62D0);
+}
+
+.btn-secondary {
+    background-color: #E0E5E9;
+    border: none;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-image: linear-gradient(45deg, #FEDD89, #E0E5E9);
+}
+
+.text-center.my-4 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
