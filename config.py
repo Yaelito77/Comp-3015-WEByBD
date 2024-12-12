@@ -1,0 +1,6 @@
+SECRET_KEY = 'Ymaldon007--2004'
+MYSQL_HOST = 'localhost'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'Ymaldon007--2004'
+MYSQL_DB = 'gestion_proyectos'
+MYSQL_CURSORCLASS = 'DictCursor'
