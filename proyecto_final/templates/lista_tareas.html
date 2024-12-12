@@ -1,0 +1,59 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Aplicación de Gestión de Proyectos{%endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- templates/lista_tareas.html -->
+    {% extends "base.html" %}
+    {% block title %}Lista de Tareas{% endblock %}
+    {% block content %}
+    <h2>Tareas del Proyecto</h2>
+    <a href="{{ url_for('crear_tarea', proyecto_id=proyecto_id) }}" class="btn btn-success mb-2">Añadir Nueva Tarea</a>
+    <table id="tablaTareas" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Completado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tarea in tareas %}
+            <tr>
+                <td>{{ tarea.descripcion }}</td>
+                <td>{{ tarea.fecha }}</td>
+                <td>{{ 'Sí' if tarea.completado else 'No' }}</td>
+                <td>
+                    <a href="{{ url_for('editar_tarea', id=tarea.id)}}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{ url_for('eliminar_tarea', id=tarea.id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondarymt-2">Volver al Dashboard</a>
+    {% endblock %}
+    {% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $('#tablaTareas').DataTable();
+        });
+    </script>
+    {% endblock %}
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

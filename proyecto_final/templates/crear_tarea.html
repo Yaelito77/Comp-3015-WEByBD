@@ -1,0 +1,40 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Aplicación de Gestión de Proyectos{%endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    
+    <!-- templates/crear_tarea.html -->
+    {% extends "base.html" %}
+    {% block title %}Crear Tarea{% endblock %}
+    {% block content %}
+    <h2>Crear Nueva Tarea</h2>
+    <form action="{{ url_for('crear_tarea', proyecto_id=proyecto_id)}}" method="post">
+        <div class="form-group">
+            13
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Añadir
+            Tarea</button>
+    </form>
+    {% endblock %}
+        
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

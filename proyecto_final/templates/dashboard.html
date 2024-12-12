@@ -1,0 +1,62 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Aplicación de Gestión de Proyectos{%endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- templates/dashboard.html -->
+    {% extends "base.html" %}
+    {% block title %}Dashboard{% endblock %}
+    {% block content %}
+    <h2>Mis Proyectos</h2>
+    <a href="{{ url_for('crear_proyecto') }}" class="btn btn-successmb-2">Crear Nuevo Proyecto</a>
+    <table id="tablaProyectos" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha de Inicio</th>
+                <th>Finalizado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proyecto in proyectos %}
+            <tr>
+                <td>{{ proyecto.titulo }}</td>
+                <td>{{ proyecto.descripcion }}</td>
+                <td>{{ proyecto.fecha_inicio }}</td>
+                <td>{{ 'Sí' if proyecto.finalizado else 'No' }}</td>
+                <td>
+                    <a href="{{ url_for('editar_proyecto', id=proyecto.id) }}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{ url_for('eliminar_proyecto', id=proyecto.id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+                    <a href="{{ url_for('lista_tareas', proyecto_id=proyecto.id) }}" class="btn btn-info btn-sm">Ver
+                        Tareas</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
+    {% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $('#tablaProyectos').DataTable();
+        });
+    </script>
+    {% endblock %}
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

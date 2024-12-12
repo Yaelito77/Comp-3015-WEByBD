@@ -1,0 +1,45 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Aplicación de Gestión de Proyectos{%endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- templates/editar_tarea.html -->
+    {% extends "base.html" %}
+    {% block title %}Editar Tarea{% endblock %}
+    {% block content %}
+    <h2>Editar Tarea</h2>
+    <form action="{{ url_for('editar_tarea', id=tarea.id) }}" method="post">
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" class="form-control" rows="3" required>{{ tarea.descripcion }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" class="form-control" value="{{ tarea.fecha }}" required>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" name="completado" class="form-check-input" {% if tarea.completado %}checked{% endif
+                %}>
+            <label class="form-check-label" for="completado">Tarea
+                Completada</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar
+            Tarea</button>
+    </form>
+    {% endblock %}
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>
